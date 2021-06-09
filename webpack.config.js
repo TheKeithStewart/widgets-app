@@ -2,7 +2,7 @@ const { ModuleFederationPlugin } = require("webpack").container;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 module.exports = {
-  entry: "./index.js",
+  entry: "./src/index",
   mode: "development",
   devtool: "hidden-source-map",
   output: {
@@ -10,16 +10,7 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: [
-      ".jsx",
-      ".js",
-      ".json",
-      ".css",
-      ".scss",
-      ".jpg",
-      "jpeg",
-      "png",
-    ],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
@@ -32,11 +23,11 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.jsx?$/,
+        test: /\.(tsx)?$/,
         loader: "babel-loader",
         exclude: /node_modules/,
         options: {
-          presets: ["@babel/preset-react"],
+          presets: ["@babel/preset-react", "@babel/preset-typescript"],
         },
       },
     ],
@@ -46,7 +37,7 @@ module.exports = {
       name: "widgets_app",
       filename: "remoteEntry.js",
       exposes: {
-        "./VsmDomain": "./src/VsmDomain.jsx",
+        "./VsmDomain": "./src/VsmDomain.tsx",
       },
     }),
     new HtmlWebpackPlugin({
