@@ -5,6 +5,6 @@ export default class VsmDomain extends React.Component {
     super(props);
   }
   render() {
-    return <div>VSM Domain</div>;
+    return <div>VSM Domain --- Blah!!!</div>;
   }
 }
