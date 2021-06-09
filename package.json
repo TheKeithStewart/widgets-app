@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "webpack": "webpack --watch",
     "serve": "serve dist -p 3003",
     "start": "concurrently \"npm run webpack\" \"npm run serve\""
