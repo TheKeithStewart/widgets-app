@@ -37,7 +37,7 @@ module.exports = {
       name: "widgets_app",
       filename: "remoteEntry.js",
       exposes: {
-        "./VsmDomain": "./src/VsmDomain.tsx",
+        "./VsmDomain": "./src/VsmDomain",
       },
     }),
     new HtmlWebpackPlugin({
