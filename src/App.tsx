@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import VsmDomain from "./VsmDomain";
+import VsmDomain from "./widgets/VsmDomain";
 
 const App = () => {
   return <VsmDomain />;
