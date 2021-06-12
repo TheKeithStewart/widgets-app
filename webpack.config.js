@@ -39,6 +39,7 @@ module.exports = {
       exposes: {
         "./VsmDomain": "./src/widgets/VsmDomain",
         "./Widget2": "./src/widgets/Widget2",
+        "./AppSwitcher": "./src/widgets/AppSwitcher",
       },
     }),
     new HtmlWebpackPlugin({

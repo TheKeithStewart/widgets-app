@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import VsmDomain from "./widgets/VsmDomain";
+import AppSwitcher from "./widgets/AppSwitcher";
 
 const App = () => {
-  return <VsmDomain />;
+  return <AppSwitcher />;
 };
 
 export default App;
