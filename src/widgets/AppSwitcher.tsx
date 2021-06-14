@@ -48,7 +48,9 @@ class AppSwitcher extends React.Component<AppSwitcherProps> {
       <div>
         Destinations:{" "}
         {destinations.map((destination: any, key: number) => (
-          <div key={key}>{destination.name}</div>
+          <div key={key}>
+            {destination.name} --- {destination.url}
+          </div>
         ))}
       </div>
     );
